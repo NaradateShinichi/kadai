@@ -21,24 +21,30 @@ echo f(5,9)."\n";
 //課題3
 
 $arr = array(1, 3, 5 ,7, 9) ;
-echo array_product($arr)."\n";
+function mp($arr){
+    $result = 1;
+    foreach($arr as $a){
+        $result *= $a;
+    }
+    return $result;
+}
+
+echo mp($arr)."\n";
 
 //課題4
 
- function max_array($arr){
-// とりあえず配列の最初の要素を一番大きい値とする
- $max_number = $arr[0];
- foreach($arr as $a){
- if($max_number < $a){
-     $max_number = $a;
- }
- }
+function max_array($arr){
+    $max_number = $arr[0];
+    foreach($arr as $a){
+        if($max_number < $a){
+            $max_number = $a;
+        }
+    }
+    return $max_number;
+}
 
- return $max_number;
- }
- 
- echo max_array($arr)."\n";
- 
+echo max_array($arr)."\n";
+
  //課題5
  
  //strip_tags
